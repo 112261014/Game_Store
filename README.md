@@ -8,7 +8,7 @@
    ./setup.sh
    
 2. **啟動服務**：
-   確認你的目錄在Game—Store/
+   確認你的目錄在Game_Store/
    * **Developer Client** (開發者工具：建立範本、上架遊戲)
        ```bash
        source venv/bin/activate
