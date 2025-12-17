@@ -1,0 +1,61 @@
+Developer：遊戲開發端 Codebase
+Developer 端代表遊戲開發者的工作環境，負責實作與測試遊戲，並透過 Developer Client 與後端 Server 溝通，完成上架與更新。
+你可以參考以下目錄結構進行設計（實際命名與細節可自行調整，但精神需類似）：
+├── create_game_template.py
+├── developer_client.py
+├── games            # 開發中遊戲（僅供開發者本地測試）
+│   ├── agario
+│   ├── my_game
+│   └── snake_tutorial
+└── template         # 遊戲範本與腳手架
+games/ 中的內容只用於開發者本地開發與測試
+
+Player：一般玩家端 Codebase
+Player 端代表一般玩家在自己電腦上的遊玩環境。玩家透過 Lobby Client 連線到 Lobby Server，瀏覽可遊玩遊戲、下載、啟動並加入房間。
+你可以參考以下目錄結構：
+├── lobby_client.py
+└── downloads        # 玩家下載的遊戲
+    ├── Player1
+    │   ├── agario
+    │   ├── my_game
+    │   └── snake_tutorial
+    ├── Player2
+    └── Player3
+
+Game_Store/
+├── common/              # 共用模組 (封包定義、錯誤碼、Utils)
+│   └── util.py              # 工具
+├── server/              # Server 端程式碼
+│   ├── dev_server.py
+│   ├── lobby_server.py
+│   ├── storage/         # [Persistence] 存放上架遊戲的實體檔案
+│   └── db/              # SQLite 資料庫檔案
+├── dev_client/          # Developer Client 程式碼
+│   ├── create_game_template.py
+│   ├── developer_client.py
+│   ├── games            # 開發中遊戲（僅供開發者本地測試）
+│   │   ├── agario
+│   │   ├── my_game
+│   │   └── snake_tutorial
+│   └── template         # 遊戲範本與腳手架
+├── player_client/       # Player Client 程式碼
+│   ├── lobby_client.py
+│   └── downloads        # 玩家下載的遊戲
+│       ├── Player1      # [檔案隔離] 玩家下載遊戲的目錄
+│       │   ├── agario
+│       │   ├── my_game
+│       │   └── snake_tutorial
+│       ├── Player2
+│       └── Player3
+├── config/              # 統一的 Config 檔 (JSON/YAML)
+│   └── system_config.json
+├── requirements.txt     # 依賴套件清單
+├── setup.sh             # 初始化安裝腳本
+└── README.md            # 說明書
+
+game_db:
+版本號
+遊戲名稱
+介紹
+遊戲類型（CLI / GUI / 人數上限等）
+遊戲相關的設定檔（例如 config 檔），可以選擇手動輸入設定，也可以直接由配置檔讀取，確保上架內容本身就包含啟動與連線所需的資訊

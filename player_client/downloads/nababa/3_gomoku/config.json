@@ -1,0 +1,10 @@
+{
+    "game_name": "gomoku",
+    "version": "1.0.0",
+    "description": "A classic 1v1 Gomoku (Five-in-a-Row) game via CLI.",
+    "game_type": "CLI",
+    "min_players": 2,
+    "max_players": 2,
+    "server_entry": "game_server.py",
+    "client_entry": "game_client.py"
+}

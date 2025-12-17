@@ -1,0 +1,10 @@
+{
+    "game_name": "Tetris",
+    "version": "1.0.0",
+    "description": "Multiplayer Tetris Battle with 7-bag randomizer and garbage mechanics.",
+    "game_type": "GUI",
+    "min_players": 1,
+    "max_players": 4,
+    "server_entry": "game_server.py",
+    "client_entry": "game_client.py"
+}

@@ -1,0 +1,17 @@
+{
+    "game_name": "Tank",
+    "version": "1.1.0",
+    "description": "Simple Multiplayer Tank Shooter with Symmetric Map using Pygame",
+    "game_type": "GUI",
+    "min_players": 2,
+    "max_players": 4,
+    "server_entry": "game_server.py",
+    "client_entry": "game_client.py",
+    "settings": {
+        "screen_width": 800,
+        "screen_height": 600,
+        "tick_rate": 60,
+        "player_speed": 3,
+        "bullet_speed": 5
+    }
+}
