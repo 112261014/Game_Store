@@ -4,8 +4,8 @@
 
 1. **執行安裝腳本** (只需執行一次)：
    ```bash
-   chmod +x setup.sh
-   ./setup.sh
+   chmod +x linux_setup.sh (or windows_setup.bat)
+   ./linux_setup.sh
    
 2. **啟動服務**：
    確認你的目錄在Game_Store/
