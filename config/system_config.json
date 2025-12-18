@@ -1,5 +1,5 @@
 {
     "HOST": "140.113.17.12",
-    "LOBBY_PORT": 10000,
-    "DEV_PORT": 10001
+    "LOBBY_PORT": 15360,
+    "DEV_PORT": 15361
 }
